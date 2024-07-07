@@ -51,14 +51,16 @@ loss, accuracy = model.evaluate(inputs_test, labels_test)
 
 print(f"Test Loss: {loss}")
 print(f"Test Accuracy: {accuracy}")
-import numpy as np
 
 # select 10 random samples from the test dataset
 random_samples = np.random.choice(len(inputs_test), size=10, replace=False)
 
 for i in random_samples:
     sample = inputs_test[i]
-    sample = sample.reshape(1, -1)  # reshaping the sample to have a batch dimension
+    sample = sample.reshape(1, -1)
+    # ^ tensorflow expects the data to be in batched format, not just a 1d array, so we specify:
+    # 1 as in 1 sample per batch
+    # -1 is a special value that means “infer the size from the length of the array”
     prediction = model.predict(sample)
     predicted_class = np.argmax(prediction)
 
