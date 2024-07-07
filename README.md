@@ -1,4 +1,4 @@
-This project is a simple demonstration of a machine learning pipeline using TensorFlow. The goal is to classify iris species using the famous Iris dataset. In the end, we were able to predict the class of random samples with 100% accuracy.
+This project is a simple demonstration of a machine learning pipeline using TensorFlow. The goal is to classify iris species using the Iris dataset, a classic dataset in machine learning. In the end, after tuning hyperparameters (namely # nodes per layer, epochs, and batch size), we were able to predict the class of random samples with 100% accuracy.
 
 The dataset contains measurements of 150 iris flowers from three different species. Each sample from the dataset contains 4 features corresponding to petal length, petal width, sepal length, and sepal width. (*Sepals* are the green leafy parts of a flower directly underneath its petals.) Our goal is to build a model that can predict the species of an iris flower based on these measurements.
 
