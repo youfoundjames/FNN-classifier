@@ -8,5 +8,6 @@ To run this project, you will need to have TensorFlow installed in your Python e
 
 ```python
 pip install tensorflow
+```
 
 Once TensorFlow is installed, you can run the Jupyter notebook to go through each step of the machine learning pipeline.
